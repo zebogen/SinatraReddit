@@ -1,8 +1,5 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  font: normal x-small verdana,arial,helvetica,sans-serif;
 }
 
 header {
@@ -39,20 +36,35 @@ header {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  left: 220px;
+  left: 210px;
 }
 
 #subset-tabs span {
+  font-size: larger;
+  font-weight: bold;
   vertical-align: bottom;
-  margin-right: 4px;
+  margin-right: 2px;
   padding: 2px 6px 0 6px;
   background-color: #eff7ff;
+  text-decoration: none;
+  color: #369;
 }
 
 #subset-tabs span.selected {
-
+  color: orangered;
+  background-color: white;
+  border: 1px solid #5f99cf;
+  border-bottom: 1px solid white;
+  z-index: 100;
 }
 
 #subset-tabs a.selected {
+}
 
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  font-size: larger;
 }

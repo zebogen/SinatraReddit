@@ -1,0 +1,5 @@
+<h1><%= @post.title %></h1>
+<h3>Body:</h3>
+<p><%= @post.body %></p>
+<h4>Comments:</h4>
+<%= erb :"comments/_list", locals: { comments: @post.comments } %>

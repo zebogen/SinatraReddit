@@ -1,5 +1,5 @@
 get '/posts' do
-  @posts = top_posts_and_links
+  @posts = Post.all_by_score
   erb :"posts/index"
 end
 
@@ -20,8 +20,4 @@ post '/posts' do
   else
     erb :"posts/new"
   end
-end
-
-def top_posts_and_links
-  (Post.all + Link.all).sort { |a, b| b.score <=> a.score }
 end

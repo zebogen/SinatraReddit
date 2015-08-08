@@ -4,4 +4,7 @@ class Comment < ActiveRecord::Base
   has_many :comments, as: :commentable
   has_many :votes, as: :votable
   validates :author_id, :commentable_id, :commentable_type, :body, presence: true
+
+  include Votable
+  
 end

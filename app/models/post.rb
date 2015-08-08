@@ -4,4 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :author, class_name: "User"
   belongs_to :subreddit
   validates :author_id, :subreddit_id, :title, :body, presence: true
+
+  include Votable
+
 end

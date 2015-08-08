@@ -2,7 +2,7 @@
   <h1>Welcome to SinatraReddit!</h1>
   <ul>
     <% @posts.each do |post| %>
-      <li><a href="/<%= resource_name(post) %>/<%= post.id %>"><%= post.title %></a></li>
+      <li><%= post.score %> - <a href="/<%= resource_name(post) %>/<%= post.id %>"><%= post.title %></a></li>
     <% end %>
   </ul>
 </div>

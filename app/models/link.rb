@@ -4,4 +4,7 @@ class Link < ActiveRecord::Base
   belongs_to :author, class_name: "User"
   belongs_to :subreddit
   validates :title, :url, presence: true
+
+  include Votable
+  
 end

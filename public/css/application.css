@@ -162,6 +162,28 @@ span.selected {
   color: white;
 }
 
+.rank {
+  color: #d6d6d6;
+  font-family: arial;
+  font-size: medium;
+  text-align: right;
+}
+
+.voting-area {
+  display: inline-block;
+  width: 55px;
+  color: #b6b6b6;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.voting-area span {
+  display: block;
+}
+
 .container {
   padding: 20px;
   font-size: 200%;
@@ -173,4 +195,38 @@ span.selected {
 
 .post {
   margin-bottom: 10px;
+}
+
+.post a {
+  color: blue;
+  font-size: medium;
+}
+
+.post p {
+  font-size: 50%;
+  color: #888;
+  margin: 2px 0;
+}
+
+section.post-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post p.submission-info {
+}
+
+.submission-info a {
+  font-size: 75%;
+}
+
+
+.post p.comment-count {
+  font-size: 50%;
+  font-weight: bold;
+}
+
+.comment-count a {
+  font-size: 50%;
+  font-weight: bold;
 }

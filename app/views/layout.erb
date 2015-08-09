@@ -20,7 +20,10 @@
 </head>
 <body>
   <header>
-    <div id="topbar">
+    <div id="topbar"><span class="selected">front</span> | 
+      <% Subreddit.all.each do |sr| %>
+        <a href="/subreddits/<%= sr.id %>"><%= sr.name %></a> -
+      <% end %>
     </div>
     <div id="header-bottom-left">
       <span id="sreddit-logo">sinatra-reddit</span>
@@ -31,6 +34,9 @@
         <span>controversial</span>
         <span>top</span>
       </nav>
+    </div>
+    <div id="header-bottom-right">
+      want to join? <a href="/sessions/new">sign in</a> or <a href="/users/new/">create an account</a> in seconds
     </div>
   </header>
   <%= yield %>

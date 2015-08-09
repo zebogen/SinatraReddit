@@ -2,6 +2,11 @@ body {
   font: normal x-small verdana,arial,helvetica,sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #369;
+}
+
 header {
   border-bottom: 1px solid #5f99cf;
   position: relative;
@@ -17,9 +22,34 @@ header {
   font-size: 90%;
   height: 18px;
   line-height: 18px;
+  padding-left: 5px;
+}
+
+#topbar a {
+  color: black;
+}
+
+#topbar a:hover {
+  text-decoration: underline;
+}
+
+span.selected {
+  color: orangered;
+  font-weight: bold;
 }
 
 #header-bottom-left {
+}
+
+#header-bottom-right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: #EFF7FF;
+  padding: 4px;
+  line-height: 12px;
+  border-top-left-radius: 7px;
+  color: gray;
 }
 
 #sreddit-logo {

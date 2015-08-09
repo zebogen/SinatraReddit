@@ -1,9 +1,176 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  font: normal x-small verdana,arial,helvetica,sans-serif;
 }
-th {
-  text-align: left;
+
+a {
+  text-decoration: none;
+  color: #369;
+}
+
+header {
+  border-bottom: 1px solid #5f99cf;
+  position: relative;
+  background-color: #cee3f8;
+  height: 65px;
+}
+
+#topbar {
+  background-color: #f0f0f0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border-bottom: 1px solid gray;
+  font-size: 90%;
+  height: 18px;
+  line-height: 18px;
+  padding-left: 5px;
+}
+
+#topbar a {
+  color: black;
+}
+
+#topbar a:hover {
+  text-decoration: underline;
+}
+
+span.selected {
+  color: orangered;
+  font-weight: bold;
+}
+
+#header-bottom-right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: #EFF7FF;
+  padding: 4px;
+  line-height: 12px;
+  border-top-left-radius: 7px;
+  color: gray;
+}
+
+#sreddit-logo {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  line-height: 1.3;
+}
+
+#subset-tabs {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 210px;
+}
+
+#subset-tabs span {
+  font-size: larger;
+  font-weight: bold;
+  vertical-align: bottom;
+  margin-right: 2px;
+  padding: 2px 6px 0 6px;
+  background-color: #eff7ff;
+  text-decoration: none;
+  color: #369;
+}
+
+#subset-tabs span.selected {
+  color: orangered;
+  background-color: white;
+  border: 1px solid #5f99cf;
+  border-bottom: 1px solid white;
+  z-index: 100;
+}
+
+#subset-tabs a.selected {
+}
+
+.side {
+  float: right;
+  background-color: white;
+  margin: 0px 5px 0 5px;
+  width: 300px;
+}
+
+.side .spacer {
+  margin: 7px 0 12px 0;
+}
+
+#search input[type=text] {
+  border: 1px solid gray;
+  font-size: 13px;
+  font-family: verdana;
+  width: 300px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 6px;
+  padding-right: 25px;
+  padding-left: 9px;
+  vertical-align: middle;
+}
+
+#login-side {
+  border: 1px solid gray;
+}
+
+#login-side input[type=text], input[type=password] {
+  font-family: verdana;
+  font-size: 11px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #999;
+  width: 141px;
+  margin: 5px 0px 0px 5px;
+  top: 5px;
+  padding: 6px;
+}
+
+#login-side input[type=submit] {
+  float: right;
+  margin: 3px;
+}
+
+.clear {
+  clear: both;
+}
+
+
+.new-post-button {
+  display: block;
+  width: 300px;
+  height: 35px;
+  color: #369;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 7px;
+  border: 2px solid #E2EDF7;
+  border-radius: 0px 32px 32px 0;
+  background: linear-gradient(#FFFFFF, #ECF4FC);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.new-post-button:hover {
+  background: linear-gradient(#BDD5EA, #77B2E9);
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  font-size: 200%;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.post {
+  margin-bottom: 10px;
 }

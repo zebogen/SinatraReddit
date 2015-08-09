@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -11,6 +11,7 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -18,6 +19,50 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <header>
+    <div id="topbar"><span class="selected">front</span> |
+      <% Subreddit.all.each do |sr| %>
+        <a href="/subreddits/<%= sr.id %>"><%= sr.name %></a> -
+      <% end %>
+    </div>
+    <div id="header-bottom-left">
+      <span id="sreddit-logo">sinatra-reddit</span>
+      <nav id="subset-tabs">
+        <span class="selected">hot</span>
+        <span>new</span>
+        <span>rising</span>
+        <span>controversial</span>
+        <span>top</span>
+      </nav>
+    </div>
+    <div id="header-bottom-right">
+      want to join? <a href="/sessions/new">sign in</a> or <a href="/users/new/">create an account</a> in seconds
+    </div>
+  </header>
+  <div class="side">
+    <div class="spacer">
+      <form action="/search" id="search" method="POST">
+        <input type="text" name="search_text" placeholder="search">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div class="spacer">
+      <form action="/sessions/new" id="login-side" method="POST">
+        <input type="text" name="user[username]" placeholder="username">
+        <input type="password" name="user[password]" placeholder="password">
+        <input type="submit" value="login">
+        <div class="clear"></div>
+      </form>
+    </div>
+    <div class="spacer">
+      <a class="new-post-button" href="">Submit a new link</a>
+    </div>
+    <div class="spacer new-post-button">
+      Submit a new text post
+    </div>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>

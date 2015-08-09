@@ -6,5 +6,5 @@ class Comment < ActiveRecord::Base
   validates :author_id, :commentable_id, :commentable_type, :body, presence: true
 
   include Votable
-  
+  include Commentable
 end

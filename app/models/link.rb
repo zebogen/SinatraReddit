@@ -6,5 +6,5 @@ class Link < ActiveRecord::Base
   validates :title, :url, presence: true
 
   include Votable
-  
+  include Commentable
 end

@@ -6,5 +6,5 @@ class Post < ActiveRecord::Base
   validates :author_id, :subreddit_id, :title, :body, presence: true
 
   include Votable
-
+  include Commentable
 end

@@ -1,3 +1,22 @@
-<% @posts.each do |post| %>
-  <div id="<%= resource_name(post) %>-<%= post.id %>" class="post"><%= post.score %> - <a href="/<%= resource_name(post) %>/<%= post.id %>"><%= post.title %></a></div>
+<% @posts.each_with_index do |post, i| %>
+  <div id="<%= resource_name(post) %>-<%= post.id %>" class="post">
+    <span class="rank"><%= i + 1 %></span>
+    <section class="voting-area">
+      <span class="fa fa-arrow-up"></span><%= post.score %><span class="fa fa-arrow-down"></span>
+    </section>
+    <section class="post-content">
+     <a href="/<%= resource_name(post) %>/<%= post.id %>"><%= post.title %></a>
+     <p class="submission-info">
+       submitted <%= time_since_creation(post) %> hours ago by <a href="/users/<%= post.author.id %>"><%= post.author.username %></a> to <a href="/subreddits/<%= post.subreddit.id %>"><%= post.subreddit.name %></a>
+     </p>
+     <p class="comment-count">
+       <a href="/<%= resource_name(post) %>/<%= post.id %>"><%= post.comment_count %> comments</a>
+       <a href="#">share</a>
+       <a href="#">save</a>
+       <a href="#">hide</a>
+       <a href="#">report</a>
+       <a href="#">pocket</a>
+     </p>
+   </section>
+  </div>
 <% end %>

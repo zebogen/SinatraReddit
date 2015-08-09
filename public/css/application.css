@@ -38,9 +38,6 @@ span.selected {
   font-weight: bold;
 }
 
-#header-bottom-left {
-}
-
 #header-bottom-right {
   position: absolute;
   right: 0px;
@@ -89,6 +86,80 @@ span.selected {
 }
 
 #subset-tabs a.selected {
+}
+
+.side {
+  float: right;
+  background-color: white;
+  margin: 0px 5px 0 5px;
+  width: 300px;
+}
+
+.side .spacer {
+  margin: 7px 0 12px 0;
+}
+
+#search input[type=text] {
+  border: 1px solid gray;
+  font-size: 13px;
+  font-family: verdana;
+  width: 300px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 6px;
+  padding-right: 25px;
+  padding-left: 9px;
+  vertical-align: middle;
+}
+
+#login-side {
+  border: 1px solid gray;
+}
+
+#login-side input[type=text], input[type=password] {
+  font-family: verdana;
+  font-size: 11px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #999;
+  width: 141px;
+  margin: 5px 0px 0px 5px;
+  top: 5px;
+  padding: 6px;
+}
+
+#login-side input[type=submit] {
+  float: right;
+  margin: 3px;
+}
+
+.clear {
+  clear: both;
+}
+
+
+.new-post-button {
+  display: block;
+  width: 300px;
+  height: 35px;
+  color: #369;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 7px;
+  border: 2px solid #E2EDF7;
+  border-radius: 0px 32px 32px 0;
+  background: linear-gradient(#FFFFFF, #ECF4FC);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.new-post-button:hover {
+  background: linear-gradient(#BDD5EA, #77B2E9);
+  color: white;
 }
 
 .container {

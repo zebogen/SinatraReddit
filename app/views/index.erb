@@ -7,10 +7,15 @@
     <section class="post-content">
      <a href="/<%= resource_name(post) %>/<%= post.id %>"><%= post.title %></a>
      <p class="submission-info">
-       submitted <%= time_since_creation(post) %> hours ago by <%= post.author.username %> to <a href="/subreddits/<%= post.subreddit.id %>"><%= post.subreddit.name %></a>
+       submitted <%= time_since_creation(post) %> hours ago by <a href="/users/<%= post.author.id %>"><%= post.author.username %></a> to <a href="/subreddits/<%= post.subreddit.id %>"><%= post.subreddit.name %></a>
      </p>
      <p class="comment-count">
        <a href="/<%= resource_name(post) %>/<%= post.id %>"><%= post.comment_count %> comments</a>
+       <a href="#">share</a>
+       <a href="#">save</a>
+       <a href="#">hide</a>
+       <a href="#">report</a>
+       <a href="#">pocket</a>
      </p>
    </section>
   </div>

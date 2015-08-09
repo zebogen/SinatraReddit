@@ -85,9 +85,6 @@ span.selected {
   z-index: 100;
 }
 
-#subset-tabs a.selected {
-}
-
 .side {
   float: right;
   background-color: white;
@@ -162,7 +159,18 @@ span.selected {
   color: white;
 }
 
+.container {
+  padding: 10px 5px;
+  font-size: 200%;
+}
+
+.container h1 {
+  margin: 0;
+}
+
 .rank {
+  display: inline-block;
+  width: 20px;
   color: #d6d6d6;
   font-family: arial;
   font-size: medium;
@@ -184,14 +192,6 @@ span.selected {
   display: block;
 }
 
-.container {
-  padding: 20px;
-  font-size: 200%;
-}
-
-.container h1 {
-  margin: 0;
-}
 
 .post {
   margin-bottom: 10px;
@@ -217,16 +217,17 @@ section.post-content {
 }
 
 .submission-info a {
-  font-size: 75%;
-}
-
-
-.post p.comment-count {
-  font-size: 50%;
-  font-weight: bold;
+  font-size: 100%;
+  color: #369;
 }
 
 .comment-count a {
-  font-size: 50%;
+  font-size: 100%;
+  color: #888;
   font-weight: bold;
+  margin-right: 6px;
+}
+
+.comment-count a:hover {
+  text-decoration: underline;
 }

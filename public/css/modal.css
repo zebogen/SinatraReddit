@@ -83,6 +83,7 @@
   margin: 0 0 10px 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   font-size: 14px;
   height: 34px;
   line-height: 20px;
@@ -103,4 +104,29 @@
   font-weight: bold;
   text-transform: uppercase;
   color: #4270a2;
+  margin-top: 0;
+}
+
+.modal button {
+  float: right;
+  margin-bottom: 0;
+  margin-top: 10px;
+  border-bottom: 2px solid #4270a2;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #4f86b5;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid transparent;
+  padding: 4px 12px 3px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 3px;
+}
+
+.modal button:hover {
+  background-color: #4980ae;
 }

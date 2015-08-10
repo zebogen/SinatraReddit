@@ -155,7 +155,6 @@ span.selected {
   clear: both;
 }
 
-
 .new-post-button {
   display: block;
   width: 300px;
@@ -163,6 +162,7 @@ span.selected {
   color: #369;
   font-size: 150%;
   font-weight: bold;
+  letter-spacing: -1px;
   text-align: center;
   padding-top: 7px;
   border: 2px solid #E2EDF7;

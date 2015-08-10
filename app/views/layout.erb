@@ -64,7 +64,27 @@
     </div>
   </div>
   <div class="modal">
-    <div id="modal-content">
+    <div id="modal-background"></div>
+    <div id="modal-container">
+      <div id="modal-content">
+        <section id="modal-section-left" class="modal-section">
+          <h4>Create a new account</h4>
+          <form id="new-account-form" action="/users" method="post">
+            <input type="text" name="user[username]" placeholder="choose a username">
+            <input type="password" name="user[password]" placeholder="choose a password">
+            <input type="text" name="user[email]" placeholder="email (optional)">
+            <button type="submit">create account</button>
+          </form>
+        </section>
+        <section id="modal-section-right" class="modal-section">
+          <h4>Sign in</h4>
+          <form id="sign-in-form" action="/sessions" method="post">
+            <input type="text" name="user[username]" placeholder="username">
+            <input type="password" name="user[password]" placeholder="password">
+            <button type="submit">sign in</button>
+          </form>
+        </section>
+      </div>
     </div>
   </div>
   <div class="container">
